@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--~~~~~~~~~~~~~~~ Favicon ~~~~~~~~~~~~~~~-->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAkpJREFUSEuNliFvFUEUhb+zJARH04QEMPgmdeBbCa0ADK6egAUEyBoSgiPo/oFiKCgCFuqpraiBpKKpaSrm8PbN7rzZ2XkbNtmX3dk7c+8595yZJ8pLIIMR5e8odjAQJ+Zz28/taLbQxBIxLF3Fa1wqlTWM678Vk8dL5OnHy9VTVhGk0PFDATHxGceL+Pa1vbOrzuM098PpicYuWZGgKCQnrWhgFVyF1UTRmN84YvsWeBe0CdwBn4EODT+E30pNKOoYgJhE4OAVxBFwc54s47R7/go8lnTRJymRpQQ5ul4hdngPPAI+dWvvAKuDZOYX4oGk077Pwd5So4PWE5GiikHacYfwHPFBagPAwTeAg9l9ryNwntdwKryHdYlYB/+Wmpd9wpqQCicvQmxfBVpkz2KTwF0nu9cT4TU1zfkAQd6ZaPdlV0Ts4A3wE6xtxG3wMeg78FrSn7wnySOhVYzZtdjUXDGcAYfAN+CdpDCkdKy9SpNTRSuzio5Ac8X02CP8uWY6xTQXC3zTG9TAybZbXh8C+4Yrgh3MavJ61OXPGaKtXjHz1A7bkj4nGnpuB06OCnkq6WO/n9hzxXwB7vYO6LTfynEPuASvg44kvRj6YLEVjveirL0OvobYB+4PWr5w3Amw1kjnQ1EsqEs+iOuON5NgN4JXwEan/+vAcdf4N2r0dzy3gmB6959QS6HmXEWdD6qFV02QHzLLClqaIDdX9WxKAdPSLCubbHLZlRzBUqOPKfv/aeMdt/vbMLG1VA+cWMSy8zZ9rQqvpPcfsYcGMjrvLZQAAAAASUVORK5CYII="
+    />
+    <!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--~~~~~~~~~~~~~~~ Remix Icon ~~~~~~~~~~~~~~~-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!--  Swiper's CSS -->
+
+    <!--~~~~~~~~~~~~~~~ CSS ~~~~~~~~~~~~~~~-->
+    <link href="/src/output.css" rel="stylesheet" />
+
+    <title>responsive || burger website</title>
+  </head>
+  <body >
+    <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
+    <header class="bg-maincolor w-full fixed top-0 left-0 z-50">
+      <nav class="container relative h-14 flex justify-between items-center">
+        <div class="logo text-4xl font-bold font-oswald">
+          <a href="#"> BUR<span class="text-secondarycolor">GER</span> </a>
+        </div>
+        <div
+          class="hidden absolute top-0 left-0 w-full py-14 bg-maincolor border-b border-b-secondarycolor md:block md:static md:py-0 md:border-none md:w-auto md:ml-0"
+        id="nav-menu">
+          <ul class="flex flex-col text-center gap-5 md:flex-row">
+            <li>
+              <a
+                href="#home"
+                class="nav__link hover:text-secondarycolor ease-in duration-200"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="nav__link hover:text-secondarycolor ease-in duration-200"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#menu"
+                class="nav__link hover:text-secondarycolor ease-in duration-200"
+                >Menu</a
+              >
+            </li>
+            <li>
+              <a
+                href="#review"
+                class="nav__link hover:text-secondarycolor ease-in duration-200"
+                >Review</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="nav__link hover:text-secondarycolor ease-in duration-200"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="absolute top-[0.7rem] right-4 text-2xl cursor-pointer md:hidden" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+        <div class="flex items-center gap-5">
+          <i class="ri-moon-line cursor-pointer ml-4 text-xl"></i>
+          <div id="hamburger">
+            <i class="ri-menu-2-line cursor-pointer text-xl md:hidden "></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!--~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~-->
+      <section id="home">
+        <div class="container flex flex-col items-center gap-10 md:flex-row">
+          <div class="mx-auto md:basis-1/2 lg:basis-2/5 animate-movingY">
+            <img src="./img/home-image.png" alt="Home image" class="w-60 md:w-full">
+          </div>
+          <div class="text-center md:basis-1/2 md:text-start lg:basis-3/5" >
+            <h1 class="home__title">happy tummy with tasty burgers.</h1>
+            <div class="separator mx-auto md:mx-0"></div>
+            <p class="pragraph">invites you on a mouthwatering journey of culinary delight. Indulge in the 
+              savory satisfaction of our delectable burgers, meticulously crafted to tantalize your taste 
+              buds and leave you craving for more. From juicy beef patties to succulent grilled
+              chicken, each burger is bursting with flavor and served with a generous portion of 
+              happiness. Whether you prefer classic cheeseburgers or adventurous gourmet creations,
+              our menu offers something to satisfy every craving and elevate your dining experience. 
+              Bite into happiness and treat your tummy to the irresistible joy of our tasty burgers.</p>
+              <div class="text-base flex items-center justify-center gap-4 py-10 md:justify-start md:gap-20">
+                <div class="text-center">
+                  <i class="fa-solid fa-utensils text-secondarycolor text-4xl"></i>
+                  <br />
+                  Delicious
+                </div>
+    
+                <div class="text-center">
+                  <i class="fa-solid fa-droplet text-secondarycolor text-4xl"></i>
+                  <br />
+                  Fresh
+                </div>
+    
+                <div class="text-center">
+                  <i class="fa-brands fa-envira text-secondarycolor text-4xl"></i>
+                  <br />
+                  Organic
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </section>
+      <!--~~~~~~~~~~~~~~~ Category ~~~~~~~~~~~~~~~-->
+      <section id="category">
+        <div class="container flex flex-col gap-5 md:flex-row ">
+          <!-- card-1 -->
+          <div class="bg-secondarycolor flex py-3 rounded-lg overflow-hidden md:flex-1">
+            <div class="basis-1/3 relative">
+              <img src="img/burger-1.png" alt="burger" class="w-28 absolute -bottom-4 -left-4">
+            </div>
+            <div>
+              <div class="mb-2 ">
+                <h4 class="card__title">Food</h4>
+                <p class="text-xs">Delicious food for everyone.</p>
+              </div>
+              <a href="#" class="text-black cursor-pointer">Buy Online</a>
+            </div>
+          </div>
+        
+          <!-- card-2 -->
+          <div class="bg-redcolor flex py-3 rounded-lg overflow-hidden md:flex-1">
+            <div class="basis-1/3 relative">
+              <img src="img/snack-1.png" alt="burger" class="w-28 absolute -bottom-4 -left-4">
+            </div>
+            <div>
+              <div class="mb-2 ">
+                <h4 class="card__title">Snacks</h4>
+                <p class="text-xs">Tasty snacks to savor.</p>
+              </div>
+              <a href="#" class="text-black cursor-pointer">Buy Online</a>
+            </div>
+          </div>
+          
+          <!-- card-3 -->
+          <div class="bg-greeencolor flex py-3 rounded-lg overflow-hidden md:flex-1">
+            <div class="basis-1/3 relative">
+              <img src="img/beverage-2.png" alt="burger" class="w-28 absolute -bottom-4 -left-4">
+            </div>
+            <div>
+              <div class="mb-2 ">
+                <h4 class="card__title">Beverage</h4>
+                <p class="text-xs">Refreshing drinks for all.</p>
+              </div>
+              <a href="#" class="text-black cursor-pointer">Buy Online</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!--~~~~~~~~~~~~~~~ Promo ~~~~~~~~~~~~~~~-->
+      <section id="promo">
+        <div class="container flex flex-col gap-5 md:flex-row ">
+          <!-- card1 -->
+          <div class="bg-maincolorLight flex flex-col p-5 rounded-lg hover:animate-movingY ">
+            <div>
+              <img src="img/promo-1.png" alt="Promo image" class="mx-auto w-40">
+              <div class="space-y-2 pt-5">
+                <p class="text-xs text-secondarycolor">Payday Promo</p>
+                <h3 class="card__title">get a 10%  discount on your order!</h3>
+                <p class="pragraph">Get an exclusive 10% discount on your entire order - limited time offer awaits!</p>
+                <a href="#" class="text-xs text-secondarycolor">Buy Online</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card2 -->
+          <div class="bg-maincolorLight flex flex-col p-5 rounded-lg hover:animate-movingY">
+            <div>
+              <img src="img/promo-2.png" alt="Promo image" class="mx-auto w-40 ">
+              <div class="space-y-2 pt-5">
+                <p class="text-xs text-secondarycolor">Payday Promo</p>
+                <h3 class="card__title">get a 10%  discount on your order!</h3>
+                <p class="pragraph">Get an exclusive 10% discount on your entire order - limited time offer awaits!</p>
+                <a href="#" class="text-xs text-secondarycolor">Buy Online</a>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+      </section>
+      <!--~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~-->
+
+      <!--~~~~~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~~-->
+
+      <!--~~~~~~~~~~~~~~~ Review ~~~~~~~~~~~~~~~-->
+
+      <!--~~~~~~~~~~~~~~~ Contact ~~~~~~~~~~~~~~~-->
+    </main>
+    <!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
+    <footer></footer>
+
+    <!--~~~~~~~~~~~~~~~ Scroll Up ~~~~~~~~~~~~~~~-->
+
+    <!--~~~~~~~~~~~~~~~ Swiper JS ~~~~~~~~~~~~~~~-->
+
+    <!--~~~~~~~~~~~~~~~ Scroll Reveal ~~~~~~~~~~~~~~~-->
+
+    <!--~~~~~~~~~~~~~~~ Main.js ~~~~~~~~~~~~~~~-->
+    <script src="main.js"></script>
+  </body>
+</html>
