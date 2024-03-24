@@ -3030,7 +3030,24 @@ section{
   .lg\:gap-12{
     gap: 3rem;
   }
+}
 
+.dark\:border-darkcolorlight:where(.dark, .dark *){
+  --tw-border-opacity: 1;
+  border-color: rgb(23 23 23 / var(--tw-border-opacity));
+}
+
+.dark\:bg-darkcolor:where(.dark, .dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-darkcolorlight:where(.dark, .dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 1024px){
   .dark\:lg\:hover\:\[paint-order\:markers\]:hover:where(.dark, .dark *){
     paint-order: markers;
   }
