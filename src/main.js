@@ -63,7 +63,7 @@ const html = document.querySelector("html")
 const themeBtn = document.getElementById("theme-toggle");
 if(localStorage.getItem('mode') == "dark") {
     darkMode();
-}
+};
 
 themeBtn.addEventListener('click',(e) => {
     if(localStorage.getItem('mode') == 'light') {
@@ -71,21 +71,21 @@ themeBtn.addEventListener('click',(e) => {
     }
     else{
         lightMode();
-    }
+    };
     
-})
+});
 
 function  darkMode  ()  {
     html.classList.add('dark');
     themeBtn.classList.replace("ri-moon-line", "ri-sun-line");
     localStorage.setItem("mode","dark");
-}
+};
 
 function  lightMode  ()  {
     html.classList.remove('dark');
     themeBtn.classList.replace("ri-sun-line", "ri-moon-line");
     localStorage.setItem("mode","light");
-}
+};
 /*~~~~~~~~~~~~~~~ SHOW SCROLL UP ~~~~~~~~~~~~~~~*/
 const scrollUp = () =>{
     const scrollUpBtn = document.getElementById('scroll-up');
@@ -96,8 +96,8 @@ const scrollUp = () =>{
     else{
         scrollUpBtn.classList.add('-bottom-1/2');
         scrollUpBtn.classList.remove('-bottom-4');
-    }
-}
+    };
+};
 window.addEventListener('scroll', scrollUp)
 /*~~~~~~~~~~~~~~~ CHANGE BACKGROUND HEADER ~~~~~~~~~~~~~~~*/
 const scrollHeader = () =>{
@@ -109,11 +109,48 @@ const scrollHeader = () =>{
     else{
         
         header.classList.remove('border-b',"border-secondarycolor");
-    }
-}
+    };
+};
 window.addEventListener('scroll', scrollHeader)
 /*~~~~~~~~~~~~~~~ SCROLL SECTIONS ACTIVE LINK ~~~~~~~~~~~~~~~*/
+const activeLink = () => {
+    const  sections = document.querySelectorAll('section');
+    const  navLinks = document.querySelectorAll('.nav__link');
+
+    let current ='home';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+
+        if(this.scrollY >= sectionTop - 60) {
+            current = section.getAttribute('id');
+        }
+    });
+    navLinks.forEach(item => {
+        item.classList.remove("text-secondarycolor");
+        if (item.href.includes(current)) {
+            item.classList.add("text-secondarycolor");
+        };
+    });
+};
+window.addEventListener('scroll', activeLink);
 
 /*~~~~~~~~~~~~~~~ SCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
+const sr = ScrollReveal({
+    origin:"top",
+    distance: "60px",
+    duration:2500,
+    delay: 400
+})
 
-/*~~~~~~~~~~~~~~~ TABS ~~~~~~~~~~~~~~~*/
+sr.reveal(".home__image");
+sr.reveal(".home__content", {origin: "bottom"});
+sr.reveal(".category__card",{interval:300});
+sr.reveal(".promo__card-1", {origin: "left"});
+sr.reveal(".promo__card-2", {origin: "right"});
+sr.reveal(".about__img", {origin: "bottom"});
+sr.reveal(".about__content", {origin: "top"});
+
+sr.reveal(".menu__items", {origin: "left"});
+sr.reveal(".customer__review", {origin: "right"});
+sr.reveal(".footer");
