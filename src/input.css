@@ -6,8 +6,12 @@
 @tailwind utilities;
 /* Style for the custom tailwind classes */
 @layer base {
+    html{
+        @apply scroll-smooth;
+    }
+
     body {
-        @apply text-white bg-maincolor tracking-wider font-main;
+        @apply text-white bg-maincolor tracking-wider font-main dark:bg-darkcolor;
     }
 
     section {

@@ -59,11 +59,33 @@ tabs.forEach(tab => {
     })
 })        
 /*~~~~~~~~~~~~~~~ DARK LIGHT THEME ~~~~~~~~~~~~~~~*/
-
+const html = document.querySelector("html")
 /*~~~~~~~~~~~~~~~ SHOW SCROLL UP ~~~~~~~~~~~~~~~*/
-
+const scrollUp = () =>{
+    const scrollUpBtn = document.getElementById('scroll-up');
+    if(this.scrollY >= 250) {
+        scrollUpBtn.classList.remove('-bottom-1/2');
+        scrollUpBtn.classList.add('-bottom-4');
+    }
+    else{
+        scrollUpBtn.classList.add('-bottom-1/2');
+        scrollUpBtn.classList.remove('-bottom-4');
+    }
+}
+window.addEventListener('scroll', scrollUp)
 /*~~~~~~~~~~~~~~~ CHANGE BACKGROUND HEADER ~~~~~~~~~~~~~~~*/
-
+const scrollHeader = () =>{
+    const header = document.getElementById('header');
+    if(this.scrollY >= 50) {
+        
+        header.classList.add('border-b',"border-secondarycolor");
+    }
+    else{
+        
+        header.classList.remove('border-b',"border-secondarycolor");
+    }
+}
+window.addEventListener('scroll', scrollHeader)
 /*~~~~~~~~~~~~~~~ SCROLL SECTIONS ACTIVE LINK ~~~~~~~~~~~~~~~*/
 
 /*~~~~~~~~~~~~~~~ SCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
