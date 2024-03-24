@@ -60,6 +60,13 @@ tabs.forEach(tab => {
 })        
 /*~~~~~~~~~~~~~~~ DARK LIGHT THEME ~~~~~~~~~~~~~~~*/
 const html = document.querySelector("html")
+const toggleBtn = document.getElementById("theme-toggle");
+
+themeBtn.addEventListener('click',(e) => {
+    html.classList.add('dark');
+    themeBtn.classList.replace("ri-moon-line", "ri-sun-line");
+    localStorage.setItem("mode","dark");
+})
 /*~~~~~~~~~~~~~~~ SHOW SCROLL UP ~~~~~~~~~~~~~~~*/
 const scrollUp = () =>{
     const scrollUpBtn = document.getElementById('scroll-up');
